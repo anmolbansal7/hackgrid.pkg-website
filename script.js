@@ -1,5 +1,5 @@
 function redD(){
-    window.open('#', '_blank');
+    window.open('http://zuddl.com/', '_blank');
 }
 function redF(){
     window.open('#', '_blank');

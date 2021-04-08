@@ -1,7 +1,7 @@
 
-var countDownDate_design = new Date("Apr 7, 2021 22:55:02").getTime();
-var countDownDate_frontend = new Date("Apr 7, 2021 22:57:52").getTime();
-var countDownDate_backend = new Date("Apr 7, 2021 22:54:55").getTime();
+var countDownDate_design = new Date("Apr 10, 2021 13:00:00").getTime();
+var countDownDate_frontend = new Date("Apr 14, 2021 13:00:00").getTime();
+var countDownDate_backend = new Date("Apr 17, 2021 13:00:00").getTime();
 
 var design_btn = document.getElementById("d_btn");
 var frontend_btn = document.getElementById("f_btn");
@@ -33,9 +33,9 @@ var days_b = Math.floor(timeleft_backend / (1000 * 60 * 60 * 24));
 var hours_b = Math.floor((timeleft_backend % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 var minutes_b = Math.floor((timeleft_backend % (1000 * 60 * 60)) / (1000 * 60));
 
-document.getElementById("time_d").innerHTML = `${days_d} Days ${hours_d} Hrs ${minutes_d} mins to go`
-document.getElementById("time_f").innerHTML = `${days_f} Days ${hours_f} Hrs ${minutes_f} mins to go`
-document.getElementById("time_b").innerHTML = `${days_b} Days ${hours_b} Hrs ${minutes_b} mins to go`
+document.getElementById("time_d").innerHTML = `${days_d} Days ${hours_d}Hrs ${minutes_d}mins to Go`
+document.getElementById("time_f").innerHTML = `${days_f} Days ${hours_f}Hrs ${minutes_f}mins to Go`
+document.getElementById("time_b").innerHTML = `${days_b} Days ${hours_b}Hrs ${minutes_b}mins to Go`
 
 if (timeleft_design < 0) {
     design_c.style.display = "none";

@@ -2,12 +2,6 @@
   font-family: SF;
   src: url(Assets/FontsFree-Net-SFProText-Regular-1.ttf);
 }
-
-/* @font-face {
-    font-family: SF_Ligth;
-    src: url(Assets/FontsFree-Net-SFProDisplay-Thin.ttf);
-} */
-
 * {
   padding: 0px;
   margin: 0px;
@@ -33,6 +27,9 @@ div.hackgrid {
   display: flex;
   justify-content: center;
   padding-top: 2%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 div.pkg {
@@ -68,6 +65,7 @@ span {
   padding: 25px 10px;
   text-align: center;
   margin-top: 80px;
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 21px;
   line-height: 29px;
@@ -105,27 +103,17 @@ input[type=] .btn {
   border-radius: 30px;
   margin-bottom: 60px;
 }
-/* 
-p{
-	font-weight: 400;
-}
-*/
 
 p.italic {
   font-weight: 500;
   font-style: italic;
   text-shadow: 1px 0.1px;
 }
-/*
-p.hackgrid{
-	font-weight: 700;
+p.italic1 {
+  font-weight: 500;
+  /* font-style: italic; */
+  text-shadow: 1px 0.1px; 
 }
-p.pkg{
-	font-weight: 700;
-}
-p.content{
-
-} */
 
 .heading {
   color: #fff;
@@ -133,6 +121,15 @@ p.content{
   font-weight: 600;
   letter-spacing: 1.1px;
   line-height: 28px;
+}
+
+.form-text{
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 142.34%;
+  padding-top: 5%;
+  font-style: normal;
 }
 
 /* Cards */
@@ -151,8 +148,23 @@ p.content{
   border-radius: 30px;
   align-items: center;
   padding: 40px 30px 30px 30px;
-  border: 1px solid rgba(17, 17, 17, 0.8);
+  border: 2px solid rgba(17, 17, 17, 0.8);
   cursor: pointer;
+  width: 25%;
+  height: auto;
+}
+
+.card1{
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background: rgba(17, 17, 17, 0.8);
+  border-radius: 30px;
+  align-items: center;
+  padding: 40px 30px 30px 30px;
+  border: 2px solid rgba(17, 17, 17, 0.8);
+  width: 380px;
+  height: auto;
 }
 
 .card:hover {
@@ -182,6 +194,15 @@ p.content{
   text-align: center;
 }
 
+.card-desc1 {
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.9px;
+  line-height: 25.62px;
+  text-align: center;
+}
+
 .card-event {
   font-size: 16px;
   font-weight: 300;
@@ -201,14 +222,35 @@ p.content{
   border: 1px solid #0a84ff;
 }
 
-/* .card-btn:hover {
-	background-color: transparent;
+.btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  height: auto;
+  width: 100%;
+}
+
+/* .btn:hover {
+color: #0A84FF;
 } */
 
-/* Card Ends */
-/*
-@media screen and (min-width: 1024px) {
-}*/
+.countdown {
+  text-align: center;
+  margin: 0px 0;
+}
+
+.text {
+  font-size: 12px;
+  color: #fff;
+  padding-top: 0px;
+}
+
+.time {
+  color: #0A84FF;
+  font-size: 16px;
+  padding-top: 7%;
+}
+
 
 @media screen and (max-width: 1023px) {
   .cards {
@@ -216,14 +258,18 @@ p.content{
   }
   .hackgrid{
 	  padding: 15%;
+    padding-bottom: 5%;
+  }
+  .hackgrid svg{
+    width: 100%;
   }
   .para-desc{
-	  font-size: 18px;
+	  font-size: 17.5px;
 	  padding-top: 0px;
   }
   .register-btn{
 	  width: 60%;
-	  font-size: 20px;
+	  font-size: 18px;
 	  height: auto;
 	  padding: 6%;
   }
@@ -237,16 +283,46 @@ p.content{
 	width: 90%;
 	margin-top: 0px;
   }
-  .card{
+  .card, .card1{
 	  margin-bottom: 50px;
+    width: auto;
+    height: auto;
   }
   div.adglogo{
     padding-top: 7%;
   }
+  .register-btn {
+    width: 70%;
+    margin: auto;
+    background-color: #0a84ff;
+    box-shadow: 0px 0px 58px -15px rgba(10, 167, 255, 0.5);
+    border-radius: 25px;
+    padding: 15px 5px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 52px;
+    cursor: pointer;
+    color: #ffffff;
+    letter-spacing: 0.9;
+  }
+  .card-heading{
+    padding-top: 0%;
+  }
+  .card svg{
+    width: 92px;
+    height: auto;
+  }
+  .card-desc{
+    padding-top: 0;
+  }
+
 }
  
 @media screen and (min-width: 761px) and (max-width: 1224px) {
-	.card{
+	.card, .card1{
 		width: 60%;
 	}
 	.cards{
@@ -260,93 +336,32 @@ p.content{
 	.hackgrid{
 		padding: 10%;
 	}
-	.card{
+	.card, .card1{
 		margin-bottom: 50px;
+    width: auto;
+    height: auto;
 	}
   div.adglogo{
     padding-top: 7%;
   }
+  .register-btn {
+    width: 60%;
+    margin: auto;
+    background-color: #0a84ff;
+    box-shadow: 0px 0px 58px -15px rgba(10, 167, 255, 0.5);
+    border-radius: 25px;
+    padding: 15px 5px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 52px;
+    cursor: pointer;
+    color: #ffffff;
+    letter-spacing: 0.9;
+  }
 }
-/*
-@media screen (min-width: 321px) and (max-width: 760px) {
-
-}
-@media screen and (max-width: 760px) {
-
-} */
-
-/*
-
-.form-text {
-  color: #fff;
-  font-size: 20px;
-  padding: 30px 0;
-  font-weight: 300;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-select,
-input {
-  background: rgba(158, 158, 158, 0.25);
-  border-radius: 12px;
-  outline: none;
-  padding: 16px 12px;
-  margin: 10px 0;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-}
-
-.select_placeholder,
-input::placeholder {
-  color: #c4c4c4;
-  font-size: 16px;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-input[type="button"] {
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.reg_no {
-  text-transform: uppercase;
-}
-
-.reg_no::placeholder {
-  text-transform: capitalize;
-}
-
-.submit-btn {
-  background: #0a84ff;
-  /* border-radius: 14.6835px; 
-  border-radius: 12px;
-  padding: 16px 12px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.submit {
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-} */
 
 /*Footer*/
 a {
@@ -411,13 +426,23 @@ p {
 }
 .footer-items {
   width: 33%;
-  padding: 10px 20px;
-  box-sizing: border-box;
+  padding: 1%;
+  /* box-sizing: border-box; */
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.foot2, .border, .qlinks .social{
+  /* margin-left: 10vw; */
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+ul{
+  list-style: inside;
   text-align: center;
 }
-/* .foot2{
-  margin-left: 10vw;
-*/
 .foot3 {
   align-items: center;
   text-align: center;
@@ -517,7 +542,7 @@ ul li:hover {
 	font-weight: 525;
 } */
 .qlinks {
-  margin-left: 15%;
+  margin-left: 25%;
 }
 .qlinks li {
   width: 50%;
